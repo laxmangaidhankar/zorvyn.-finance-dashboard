@@ -1,0 +1,88 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+:root {
+
+  --bg:        #080c14;
+  --bg2:       #0c1120;
+  --surface:   #0f1623;
+  --surface2:  #141d2e;
+  --surface3:  #1a2540;
+  --border:    #1e2d47;
+  --border2:   #243352;
+
+  --text:      #e8edf5;
+  --text2:     #7a8fad;
+  --text3:     #4a5f7a;
+
+  --primary:        #00b4d8;
+  --primary-dim:    rgba(0, 180, 216, 0.12);
+  --primary-glow:   rgba(0, 180, 216, 0.25);
+
+  --green:          #00d68f;
+  --green-dim:      rgba(0, 214, 143, 0.12);
+  --red:            #ff4d6a;
+  --red-dim:        rgba(255, 77, 106, 0.12);
+  --yellow:         #ffb830;
+  --yellow-dim:     rgba(255, 184, 48, 0.12);
+  --purple:         #7c6af7;
+  --purple-dim:     rgba(124, 106, 247, 0.12);
+
+  --sidebar-w: 248px;
+  --radius:    10px;
+  --radius-lg: 14px;
+
+  --shadow:    0 1px 3px rgba(0,0,0,.4), 0 1px 2px rgba(0,0,0,.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.5);
+  --shadow-glow: 0 0 20px rgba(0, 180, 216, 0.15);
+}
+
+[data-theme="light"] {
+  --bg:        #f0f4f9;
+  --bg2:       #e8edf5;
+  --surface:   #ffffff;
+  --surface2:  #f5f7fb;
+  --surface3:  #edf0f7;
+  --border:    #dde3ee;
+  --border2:   #c8d0e0;
+
+  --text:      #0d1b2e;
+  --text2:     #5a6e8a;
+  --text3:     #8fa0b8;
+
+  --primary:        #0096b8;
+  --primary-dim:    rgba(0, 150, 184, 0.1);
+  --primary-glow:   rgba(0, 150, 184, 0.2);
+
+  --green:          #00a86b;
+  --green-dim:      rgba(0, 168, 107, 0.1);
+  --red:            #e03050;
+  --red-dim:        rgba(224, 48, 80, 0.1);
+  --yellow:         #d4900a;
+  --yellow-dim:     rgba(212, 144, 10, 0.1);
+  --purple:         #5b4fd4;
+  --purple-dim:     rgba(91, 79, 212, 0.1);
+
+  --shadow:    0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.1);
+  --shadow-glow: 0 0 20px rgba(0, 150, 184, 0.1);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  transition: background 0.25s, color 0.25s;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { cursor: pointer; font-family: inherit; }
+input, select { font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
